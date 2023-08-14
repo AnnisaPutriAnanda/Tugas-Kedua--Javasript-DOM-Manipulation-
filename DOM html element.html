@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table,th,td,tr {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+    border: 1px solid;
+    padding: 8px 20px;
+    font-weight: normal;
+}
+body{
+	font-family: sans-serif;
+}
+button2, input2{
+	background: #e9cc4c;
+	color: white;
+	font-size: 11pt;
+	width: 30%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+    text-align: center;
+}
+button1, input1 {
+	background: #607db3;
+	color: white;
+	font-size: 11pt;
+	width: 30%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+    text-align: center;
+}
+button, input{
+	background: #7ac07c;
+	color: white;
+	font-size: 11pt;
+	width: 30%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+    text-align: center;
+}
+</style>
+
+<title>DOM Manipulation di Javascript</title>
+</head>
+<body>
+<center>
+<h1>Memanipulasi elemen HTML dengan DOM Manipulation</h1>
+<p onclick="this.innerHTML ='Bisa berubah menjadi kalimat ini'">Misalnya Kalimat Ini..</p>
+
+<h2>Contoh lain dengan input button</h2>
+<button onclick="document.getElementById('variabel').innerHTML ='Y'">Ubah variabel ke Y</button> <button onclick="document.getElementById('konstanta').innerHTML ='5'">Ubah konstanta ke 5</button>
+
+  <table>
+     <tr>
+       <td><P id="variabel">X</P></td><td><p id="konstanta">10</p></td>
+     </tr>
+  </table>
+
+<button onclick="document.getElementById('variabel').innerHTML ='X'">Ubah variabel ke X</button> <button onclick="document.getElementById('konstanta').innerHTML ='10'">Ubah konstanta ke 10</button>
+
+<br>
+<br>
+
+<h2>Mengubah elemen dengan input text</h2>
+<input type="text" id="infut" value="Elemen ini dapat diubah">
+
+<button2 onclick="inputElemen()">Ubah</button2>
+<table>
+    <tr>
+        <td>
+<p id="inputan">Elemen ini dapat diubah</p>
+</td>
+</tr>
+</table>
+<script>
+function inputElemen() {
+  var x = document.getElementById("infut").value;
+  document.getElementById("inputan").innerHTML = x;
+}
+</script>
+
+<br>
+<br>
+
+<h2>Merubah Tampilan</h2>
+<button onclick="document.getElementById('ukuran').style.fontSize ='30px'">Perbesar Kalimat</button> <button onclick="document.getElementById('ukuran').style.fontSize ='16px'">Perkecil Kalimat</button>
+
+<p id="ukuran">Kalimat Ini Dapat Berubah Ukuran</p> 
+
+<table>
+<tr>
+<td><font size="5"><p id="kata" onclick="this.style.color='red'">Klik untuk Ubah Warna</p></font><button onclick="document.getElementById('kata').style.color ='Black'">Reset</button></td>
+</tr>
+</table>
+
+<br>
+<input type="button" value="Ubah Warna Background(Abu-Abu)" onclick="clr('grey')";/>
+<input type="button" value="Ubah Warna Background(Putih)" onclick="clr('white')";/>
+<script>
+function clr(color){
+    document.body.style.background = color;
+}
+</script>
+
+<br>
+<br>
+
+<h2>Gambar juga bisa dijadikan elemen yang dapat diubah</h2>
+<button2 onclick="document.getElementById('myImage').src='senyum.png'">Senang</button2>
+
+<img id="myImage" src="sedih.png" style="width:100px">
+
+<button1 onclick="document.getElementById('myImage').src='sedih.png'">Sedih</button1>
+ 
+<br>
+<br>
+
+</center>
+<br><br><br><br>
+</body>
+</html>

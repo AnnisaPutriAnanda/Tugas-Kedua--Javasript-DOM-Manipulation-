@@ -1,0 +1,9 @@
+#square {
+    width: 20em;
+    height: 20em;
+    border: 2px;
+    margin-bottom: 1em;
+}
+button{
+    padding:.5em 2em;
+}
